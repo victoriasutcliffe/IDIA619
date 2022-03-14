@@ -1,5 +1,5 @@
 <html>
-<head><title>Weather</title>
+<head><title>Weather2</title>
 <script>
 window.onload = function() {
 var xmlhttp = new XMLHttpRequest();
@@ -20,9 +20,9 @@ var i;
 for(i = 0; i < arr.length; i++) {
 
 	out += arr[i].date + "<br>"
-	out += arr[i].temperature
-	out += arr[i].precipitation
-	out += arr[i].clouds
+	out += arr[i].temperature + "<br>"
+	out += arr[i].precipitation + "<br>"
+	out += arr[i].clouds + "<br>"
 
 
 	if (arr[i].precipitation > 70) {
