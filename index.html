@@ -16,17 +16,13 @@ xmlhttp.send();
 
 function myFunction(arr) {
 var out = "<h1>Weather</h1>";
-var str1 = "Date:";
-var str2 = "Temperature:";
-var str3 = "Precipitation:";
-var str4 = "Clouds:";
 var i;
 for(i = 0; i < arr.length; i++) {
 
-	out + str1 += arr[i].date + "<br>"
-	out + str2 += arr[i].temperature + "<br>"
-	out + str3 += arr[i].precipitation + "<br>"
-	out + str4 += arr[i].clouds + "<br>"
+	out += 'date:' + arr[i].date + "<br>"
+	out += arr[i].temperature + "<br>"
+	out += arr[i].precipitation + "<br>"
+	out += arr[i].clouds + "<br>"
 
 
 	if (arr[i].precipitation > 70) {
