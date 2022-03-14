@@ -1,5 +1,5 @@
 <html>
-<head><title>Step Tracker</title>
+<head><title>Weather</title>
 <script>
 window.onload = function() {
 var xmlhttp = new XMLHttpRequest();
@@ -15,22 +15,28 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function myFunction(arr) {
-    var out = "<h1>Step Data</h1>";
-    var i;
-    for(i = 0; i < arr.length; i++) {
-       
-        out += arr[i].date + "<br>"
-        out += arr[i].steps + " "
-        
-        if (arr[i].steps > 10000) {
-        	out += "<img src = 'checkbox_checked.png' height='10'>"
-        } else {
-        	out += "<img src = 'checkbox_unchecked.png' height='10'>"
-        }   
-        
-        out += "</p>" 
-    }
-    document.getElementById("id01").innerHTML = out;
+var out = "<h1>Weather</h1>;
+var i;
+for(i = 0; i < arr.length; i++) {
+
+	out += arr[i].date + "<br>"
+	out += arr[i].temperature
+	out += arr[i].precipitation
+	out += arr[i].clouds
+
+
+	if (arr[i].precipitation > 70) {
+		out += "<img.src = 'rain03.png' height='10'>" 
+		
+	} else {
+		out += "<img.src = 'cloudy.png' height='10'>" 
+	}
+	
+	out += "</p>"
+	
+}
+	document.getElementById("id01").innerHTML = out
+	
 }
 }
 </script>
