@@ -4,7 +4,6 @@
 window.onload = function() {
 var xmlhttp = new XMLHttpRequest();
 var url = "weather.txt";
-var test = <img src="rain03.png">
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -27,10 +26,10 @@ for(i = 0; i < arr.length; i++) {
 
 
 	if (arr[i].precipitation > 70) {
-		out += "rain03.png"
+		out += "<img.src = 'rain03.png' height='10'>" 
 		
 	} else {
-		out += test 
+		out += "<img.src = 'cloudy.png' height='10'>" 
 	}
 	
 	out += "</p>"
